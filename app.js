@@ -22,8 +22,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     methods:["GET", "PUT", "DELETE", "POST"],
-    credentials: true,
-    origin: 'http://localhost:4200'
+    credentials: true
 }))
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/tasks", taskRouter);
