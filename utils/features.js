@@ -10,7 +10,7 @@ export const sendCookie = (user, res, message, statusCode = 200) => {
             'token', token, {
             httpOnly: true,
             maxAge: 15 * 60 * 1000,
-            sameSite: "lax",
+            sameSite: "none",
             secure: false
         }
         )
