@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 export const sendCookie = (user, res, message, statusCode = 200) => {
 
     const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
-    console.log("Token generated while logging in", token);
+    console.log("Token generated while logging in", token);  
     res
         .status(statusCode)
         .cookie(
@@ -18,4 +18,6 @@ export const sendCookie = (user, res, message, statusCode = 200) => {
             success: true,
             message,
         });
+        console.log("Whole Request Object", req);
+        console.log("Fetching Token in sendCookie()", req.cookies.token);
 };
