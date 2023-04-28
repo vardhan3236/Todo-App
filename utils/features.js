@@ -18,6 +18,4 @@ export const sendCookie = (user, res, message, statusCode = 200) => {
             success: true,
             message,
         });
-        console.log("Whole Request Object", req);
-        console.log("Fetching Token in sendCookie()", req.cookies.token);
 };
